@@ -9,11 +9,11 @@ func peakIndexInMountainArray(A []int) int {
     for i := range A {
         a = append(a, A[i])
     }
-    idx := utils.BSearch(a, nil, cmp)
+    idx := utils.BSearch(a, nil, cmpFor852)
     return idx
 }
 
-func cmp(a []interface{}, target interface{}, curIdx int) int {
+func cmpFor852(a []interface{}, target interface{}, curIdx int) int {
     if curIdx == 0 {
         return 1
     } else if curIdx == len(a)-1 {

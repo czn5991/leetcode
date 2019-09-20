@@ -7,6 +7,10 @@ import (
 
 var VDebugMode = false
 
+
+/*
+    黄金分割二分查找？
+ */
 func BSearch(datas []interface{}, target interface{},
     cmp func(a []interface{}, target interface{}, curIdx int) int) int {
     if datas == nil || len(datas) == 0 {
