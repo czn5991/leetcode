@@ -1,4 +1,4 @@
-package binarySearch
+package easy
 
 func twoSum(numbers []int, target int) []int {
     l, h := 0, len(numbers)-1

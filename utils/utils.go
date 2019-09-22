@@ -7,10 +7,9 @@ import (
 
 var VDebugMode = false
 
-
 /*
-    黄金分割二分查找？
- */
+   黄金分割二分查找？
+*/
 func BSearch(datas []interface{}, target interface{},
     cmp func(a []interface{}, target interface{}, curIdx int) int) int {
     if datas == nil || len(datas) == 0 {
@@ -31,6 +30,21 @@ func BSearch(datas []interface{}, target interface{},
         m = (l + h) / 2
     }
     return -1
+}
+
+func CommonCmpIncrInts(a []interface{}, target interface{}, curIdx int) int {
+    cur, tar := a[curIdx].(int), target.(int)
+    if cur == tar {
+        return 0
+    } else if cur < tar {
+        return 1
+    } else {
+        return -1
+    }
+}
+
+func CommonCmpDecrInts(a []interface{}, target interface{}, curIdx int) int {
+    return -CommonCmpIncrInts(a, target, curIdx)
 }
 
 func UniqueIntArray(a []int) []int {

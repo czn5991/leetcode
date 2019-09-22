@@ -1,4 +1,4 @@
-package binarySearch
+package easy
 
 import (
     "leetcode/utils"
